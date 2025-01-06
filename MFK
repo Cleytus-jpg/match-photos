@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Marry, Kill, Fuck Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .group {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .individual {
+      margin: 5px 0;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    #results {
+      margin-top: 30px;
+      padding: 15px;
+      border: 1px dashed #666;
+    }
+    .result-category {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Marry, Kill, Fuck</h1>
+<p>For each group of three, pick who you'd Marry, who you'd Kill, and who you'd Fuck. Make sure each person in a group gets exactly one label. Have fun!</p>
+
+<form id="mkfForm">
+  <!-- Group 1 -->
+  <div class="group">
+    <h2>Group 1</h2>
+    <div class="individual">
+      <label>Janet Jackson:</label>
+      <label><input type="radio" name="group1_janet_jackson" value="Marry">Marry</label>
+      <label><input type="radio" name="group1_janet_jackson" value="Kill">Kill</label>
+      <label><input type="radio" name="group1_janet_jackson" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Kristen Stewart:</label>
+      <label><input type="radio" name="group1_kristen_stewart" value="Marry">Marry</label>
+      <label><input type="radio" name="group1_kristen_stewart" value="Kill">Kill</label>
+      <label><input type="radio" name="group1_kristen_stewart" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Miley Cyrus:</label>
+      <label><input type="radio" name="group1_miley_cyrus" value="Marry">Marry</label>
+      <label><input type="radio" name="group1_miley_cyrus" value="Kill">Kill</label>
+      <label><input type="radio" name="group1_miley_cyrus" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 2 -->
+  <div class="group">
+    <h2>Group 2</h2>
+    <div class="individual">
+      <label>Alicia Keys:</label>
+      <label><input type="radio" name="group2_alicia_keys" value="Marry">Marry</label>
+      <label><input type="radio" name="group2_alicia_keys" value="Kill">Kill</label>
+      <label><input type="radio" name="group2_alicia_keys" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Beyoncé:</label>
+      <label><input type="radio" name="group2_beyonce" value="Marry">Marry</label>
+      <label><input type="radio" name="group2_beyonce" value="Kill">Kill</label>
+      <label><input type="radio" name="group2_beyonce" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Faith Hill:</label>
+      <label><input type="radio" name="group2_faith_hill" value="Marry">Marry</label>
+      <label><input type="radio" name="group2_faith_hill" value="Kill">Kill</label>
+      <label><input type="radio" name="group2_faith_hill" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 3 -->
+  <div class="group">
+    <h2>Group 3</h2>
+    <div class="individual">
+      <label>Mariah Carey:</label>
+      <label><input type="radio" name="group3_mariah_carey" value="Marry">Marry</label>
+      <label><input type="radio" name="group3_mariah_carey" value="Kill">Kill</label>
+      <label><input type="radio" name="group3_mariah_carey" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Kelly Clarkson:</label>
+      <label><input type="radio" name="group3_kelly_clarkson" value="Marry">Marry</label>
+      <label><input type="radio" name="group3_kelly_clarkson" value="Kill">Kill</label>
+      <label><input type="radio" name="group3_kelly_clarkson" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Rihanna:</label>
+      <label><input type="radio" name="group3_rihanna" value="Marry">Marry</label>
+      <label><input type="radio" name="group3_rihanna" value="Kill">Kill</label>
+      <label><input type="radio" name="group3_rihanna" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 4 -->
+  <div class="group">
+    <h2>Group 4</h2>
+    <div class="individual">
+      <label>Gwyneth Paltrow:</label>
+      <label><input type="radio" name="group4_gwyneth_paltrow" value="Marry">Marry</label>
+      <label><input type="radio" name="group4_gwyneth_paltrow" value="Kill">Kill</label>
+      <label><input type="radio" name="group4_gwyneth_paltrow" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Taylor Swift:</label>
+      <label><input type="radio" name="group4_taylor_swift" value="Marry">Marry</label>
+      <label><input type="radio" name="group4_taylor_swift" value="Kill">Kill</label>
+      <label><input type="radio" name="group4_taylor_swift" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Shakira:</label>
+      <label><input type="radio" name="group4_shakira" value="Marry">Marry</label>
+      <label><input type="radio" name="group4_shakira" value="Kill">Kill</label>
+      <label><input type="radio" name="group4_shakira" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 5 -->
+  <div class="group">
+    <h2>Group 5</h2>
+    <div class="individual">
+      <label>Lady Gaga:</label>
+      <label><input type="radio" name="group5_lady_gaga" value="Marry">Marry</label>
+      <label><input type="radio" name="group5_lady_gaga" value="Kill">Kill</label>
+      <label><input type="radio" name="group5_lady_gaga" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Jennifer Lopez:</label>
+      <label><input type="radio" name="group5_jennifer_lopez" value="Marry">Marry</label>
+      <label><input type="radio" name="group5_jennifer_lopez" value="Kill">Kill</label>
+      <label><input type="radio" name="group5_jennifer_lopez" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Carrie Underwood:</label>
+      <label><input type="radio" name="group5_carrie_underwood" value="Marry">Marry</label>
+      <label><input type="radio" name="group5_carrie_underwood" value="Kill">Kill</label>
+      <label><input type="radio" name="group5_carrie_underwood" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 6 -->
+  <div class="group">
+    <h2>Group 6</h2>
+    <div class="individual">
+      <label>Selena Gomez:</label>
+      <label><input type="radio" name="group6_selena_gomez" value="Marry">Marry</label>
+      <label><input type="radio" name="group6_selena_gomez" value="Kill">Kill</label>
+      <label><input type="radio" name="group6_selena_gomez" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Amy Poehler:</label>
+      <label><input type="radio" name="group6_amy_poehler" value="Marry">Marry</label>
+      <label><input type="radio" name="group6_amy_poehler" value="Kill">Kill</label>
+      <label><input type="radio" name="group6_amy_poehler" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Madonna:</label>
+      <label><input type="radio" name="group6_madonna" value="Marry">Marry</label>
+      <label><input type="radio" name="group6_madonna" value="Kill">Kill</label>
+      <label><input type="radio" name="group6_madonna" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 7 -->
+  <div class="group">
+    <h2>Group 7</h2>
+    <div class="individual">
+      <label>Emma Stone:</label>
+      <label><input type="radio" name="group7_emma_stone" value="Marry">Marry</label>
+      <label><input type="radio" name="group7_emma_stone" value="Kill">Kill</label>
+      <label><input type="radio" name="group7_emma_stone" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Britney Spears:</label>
+      <label><input type="radio" name="group7_britney_spears" value="Marry">Marry</label>
+      <label><input type="radio" name="group7_britney_spears" value="Kill">Kill</label>
+      <label><input type="radio" name="group7_britney_spears" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Miranda Lambert:</label>
+      <label><input type="radio" name="group7_miranda_lambert" value="Marry">Marry</label>
+      <label><input type="radio" name="group7_miranda_lambert" value="Kill">Kill</label>
+      <label><input type="radio" name="group7_miranda_lambert" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 8 -->
+  <div class="group">
+    <h2>Group 8</h2>
+    <div class="individual">
+      <label>Serena Williams:</label>
+      <label><input type="radio" name="group8_serena_williams" value="Marry">Marry</label>
+      <label><input type="radio" name="group8_serena_williams" value="Kill">Kill</label>
+      <label><input type="radio" name="group8_serena_williams" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Angelina Jolie:</label>
+      <label><input type="radio" name="group8_angelina_jolie" value="Marry">Marry</label>
+      <label><input type="radio" name="group8_angelina_jolie" value="Kill">Kill</label>
+      <label><input type="radio" name="group8_angelina_jolie" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Adele:</label>
+      <label><input type="radio" name="group8_adele" value="Marry">Marry</label>
+      <label><input type="radio" name="group8_adele" value="Kill">Kill</label>
+      <label><input type="radio" name="group8_adele" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 9 -->
+  <div class="group">
+    <h2>Group 9</h2>
+    <div class="individual">
+      <label>Christina Aguilera:</label>
+      <label><input type="radio" name="group9_christina_aguilera" value="Marry">Marry</label>
+      <label><input type="radio" name="group9_christina_aguilera" value="Kill">Kill</label>
+      <label><input type="radio" name="group9_christina_aguilera" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Jennifer Aniston:</label>
+      <label><input type="radio" name="group9_jennifer_aniston" value="Marry">Marry</label>
+      <label><input type="radio" name="group9_jennifer_aniston" value="Kill">Kill</label>
+      <label><input type="radio" name="group9_jennifer_aniston" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Anne Hathaway:</label>
+      <label><input type="radio" name="group9_anne_hathaway" value="Marry">Marry</label>
+      <label><input type="radio" name="group9_anne_hathaway" value="Kill">Kill</label>
+      <label><input type="radio" name="group9_anne_hathaway" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <!-- Group 10 -->
+  <div class="group">
+    <h2>Group 10</h2>
+    <div class="individual">
+      <label>Demi Lovato:</label>
+      <label><input type="radio" name="group10_demi_lovato" value="Marry">Marry</label>
+      <label><input type="radio" name="group10_demi_lovato" value="Kill">Kill</label>
+      <label><input type="radio" name="group10_demi_lovato" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Katy Perry:</label>
+      <label><input type="radio" name="group10_katy_perry" value="Marry">Marry</label>
+      <label><input type="radio" name="group10_katy_perry" value="Kill">Kill</label>
+      <label><input type="radio" name="group10_katy_perry" value="Fuck">Fuck</label>
+    </div>
+    <div class="individual">
+      <label>Nicki Minaj:</label>
+      <label><input type="radio" name="group10_nicki_minaj" value="Marry">Marry</label>
+      <label><input type="radio" name="group10_nicki_minaj" value="Kill">Kill</label>
+      <label><input type="radio" name="group10_nicki_minaj" value="Fuck">Fuck</label>
+    </div>
+  </div>
+
+  <button type="button" onclick="showResults()">Submit Choices</button>
+</form>
+
+<div id="results"></div>
+
+<script>
+function capitalizeWords(str) {
+  return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function showResults() {
+  const form = document.getElementById('mkfForm');
+  const formData = new FormData(form);
+
+  // Initialize results
+  let results = {
+    'Marry': [],
+    'Kill': [],
+    'Fuck': []
+  };
+
+  // Track assignments per group to ensure one choice per category
+  let groupAssignments = {};
+
+  for (let [key, value] of formData.entries()) {
+    // key format: groupX_person_name (e.g., group1_janet_jackson)
+    let parts = key.split('_');
+    let group = parts[0]; // e.g., group1
+    let person = parts.slice(1).join(' '); // e.g., janet jackson
+
+    // Initialize group in assignments if not present
+    if (!groupAssignments[group]) {
+      groupAssignments[group] = {};
+    }
+
+    // Check if the category for this group is already filled
+    if (groupAssignments[group][value]) {
+      alert(`You have already chosen someone to ${value} in ${capitalizeWords(group)}. Please select a different option.`);
+      return;
+    }
+
+    groupAssignments[group][value] = true;
+
+    // Capitalize each word in the person's name
+    let personName = capitalizeWords(person);
+
+    results[value].push(personName);
+  }
+
+  // Check if all groups have all categories filled
+  for (let i = 1; i <= 10; i++) {
+    let group = `group${i}`;
+    if (!groupAssignments[group] || !groupAssignments[group]['Marry'] || !groupAssignments[group]['Kill'] || !groupAssignments[group]['Fuck']) {
+      alert(`Please assign Marry, Kill, and Fuck in Group ${i}.`);
+      return;
+    }
+  }
+
+  // Construct the output
+  let output = '<h2>Your Results</h2>';
+
+  for (let category in results) {
+    output += `<p class="result-category">${category}:</p>`;
+    if (results[category].length === 0) {
+      output += `<p>No one</p>`;
+    } else {
+      output += `<ul>`;
+      results[category].forEach(name => {
+        output += `<li>${name}</li>`;
+      });
+      output += `</ul>`;
+    }
+  }
+
+  // Display the results
+  document.getElementById('results').innerHTML = output;
+}
+</script>
+
+</body>
+</html>
